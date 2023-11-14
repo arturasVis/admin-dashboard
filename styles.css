@@ -6,6 +6,7 @@
     --isabelline: #eee5e5ff;
     margin: 0;
     padding: 0;
+    
 }
 body{
     margin: 0;
@@ -15,13 +16,20 @@ body{
     display: grid;
     padding: 0;
     margin: 0;
-    grid-template: 1.5fr repeat(3,2fr)/1fr 4fr;
-    width: 100vw;
-    height: 100vh;
+    grid-template: 1fr repeat(3,2fr)/1fr 4fr;
+    max-width: 100vw;
+    height: auto;
+    min-height: 100vh;
 }
 #sidebar{
+    
     background-color: var(--verdigris);
     grid-area: 1 / 1 / 5 / 2;
+}
+.container{
+    align-self: start;
+    position: sticky;
+    top: 1rem;
 }
 #header{
     background-color: var(--isabelline);
@@ -32,26 +40,29 @@ body{
     grid-area: 2 / 2 / 5 / 3;
     display: grid;
     grid-template:1fr 1fr/ 2fr 1fr;
+    width: 100%;
+    height: auto;
 }
-#sidebar div div{
-    display: inline;
-}
-#sidebar div div img{
+.logo{
     width: 50px;
     height: auto;
 }
-#sidebar div ul li img{
+.icons{
     width: 25px;
     height: auto;
 }
 
 .cards{
     display: grid;
-    grid-template-rows: repeat(3,1fr);
-    grid-template-columns: repeat(2,minmax(50px,1fr));
+    grid-template-rows:25px repeat(3,1fr);
+    grid-template-columns:repeat(2,minmax(50px,1fr));
     grid-area: 1 / 1 / 3 / 2;
     grid-gap: 1rem;
-    height: 100%;
+    
+}
+
+#cards_title{
+    grid-area: 1 / 1 / 2 / 3;
 }
 .card{
     background-color: var(--isabelline);
@@ -59,9 +70,33 @@ body{
     padding: 25px;
     border-radius: 7px;
     box-shadow: 2px 2px 2px 2px gray;
+}
+.card:hover{
+    
+}
+    
+.project{
     border-left: 0.5rem solid var(--paynes-gray);
     margin: 25px;
+    font-size: 1em;
 }
 .card h1{
     font-size: 1em;
+}
+.picture{
+    overflow: hidden;
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    z-index: 1;    
+}
+.trending{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+.profile_img{
+    width: 6rem;
+    height: auto;
+    left:1px;
+    margin-left: -20px;
 }
