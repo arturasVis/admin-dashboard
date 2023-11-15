@@ -1,12 +1,12 @@
 *{
-    --black-olive: #37392eff;
-    --paynes-gray: #19647eff;
-    --verdigris: #28afb0ff;
-    --timberwolf: #ddcecdff;
-    --isabelline: #eee5e5ff;
+    --rich-black: #001524ff;
+    --caribbean-current: #15616dff;
+    --papaya-whip: #ffecd1ff;
+    --orange-wheel: #ff7d00ff;
+    --sienna: #78290fff;
     margin: 0;
     padding: 0;
-    
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 body{
     margin: 0;
@@ -23,8 +23,9 @@ body{
 }
 #sidebar{
     
-    background-color: var(--verdigris);
+    background-color: var(--rich-black);
     grid-area: 1 / 1 / 5 / 2;
+    color: white;
 }
 .container{
     align-self: start;
@@ -32,11 +33,13 @@ body{
     top: 1rem;
 }
 #header{
-    background-color: var(--isabelline);
+    background-color: var(--caribbean-current);
+    display: grid;
+    grid-template:1fr 1.5fr / 2fr 1fr;
 }
 
 #main_window{
-    background-color: var(--timberwolf);
+    background-color: var(--papaya-whip);
     grid-area: 2 / 2 / 5 / 3;
     display: grid;
     grid-template:1fr 1fr/ 2fr 1fr;
@@ -46,10 +49,12 @@ body{
 .logo{
     width: 50px;
     height: auto;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(78deg) brightness(104%) contrast(101%);
 }
 .icons{
     width: 25px;
     height: auto;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(78deg) brightness(104%) contrast(101%);
 }
 
 .cards{
@@ -65,7 +70,7 @@ body{
     grid-area: 1 / 1 / 2 / 3;
 }
 .card{
-    background-color: var(--isabelline);
+    background-color: var(--orange-wheel);
     color: var(--black-olive);
     padding: 25px;
     border-radius: 7px;
@@ -99,4 +104,51 @@ body{
     height: auto;
     left:1px;
     margin-left: -20px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.user{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.user_profile{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-area: 2 / 1 / 3 / 2;
+    padding: 25px;
+}
+.buttons{
+    grid-area: 2 / 2 / 3 / 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 50px;
+    gap: 20px;
+}
+.user{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    align-items: center;
+    justify-items: end;
+    margin: 15px 15px 0px 0px;
+    
+}
+#search{
+    width: 70%;
+    height: 1.5rem;
+    border-radius: 30px;
+
+}
+.search_bar{
+    margin-left: 15px;
+    display: grid;
+    grid-template-columns: 1fr 15fr;
+    align-items: center;
+    justify-content: center;
+}
+#search_icon{
+
+    right: 10rem;
+    top: 1px;
 }
