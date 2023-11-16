@@ -229,7 +229,6 @@ div ul li{
 #sidebar div div ul li:hover{
     color: gray;
     filter: invert(44%) sepia(0%) saturate(1138%) hue-rotate(269deg) brightness(115%) contrast(85%);
-
 }
 button:hover{
     background-color: var(--cards-colour-hover);
